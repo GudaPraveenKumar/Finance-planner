@@ -25,30 +25,48 @@
               <ion-card>
                 <ion-card-header>
                   <ion-card-title>New Expense</ion-card-title>
-                  <ion-card-subtitle>Sub header</ion-card-subtitle>
                 </ion-card-header>
                 <ion-card-content>
                   <ion-item>
                     <ion-label position="floating">Expense Reason</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input type="text" id="reason"></ion-input>
                   </ion-item>
                   <ion-item>
                     <ion-label position="floating">Expense Amount</ion-label>
-                    <ion-input type="number"></ion-input>
+                    <ion-input type="number" id="amount"></ion-input>
                   </ion-item>
-                  <ion-button fill="outline" color="danger">
-                    <ion-icon slot="start" name="close"></ion-icon
-                    >clear</ion-button
-                  >
-                  <ion-button color="primary">
-                    <ion-icon slot="start" name="add"></ion-icon>Add</ion-button
-                  >
+                  <div margin-vertical text-end>
+                    <ion-button fill="outline" color="danger" id="btn-cancel">
+                      <ion-icon slot="start" name="close"></ion-icon
+                      >clear</ion-button
+                    >
+                    <ion-button color="primary" id="btn-add">
+                      <ion-icon slot="start" name="add"></ion-icon>Add
+                      Expense</ion-button
+                    >
+                  </div>
                 </ion-card-content>
               </ion-card>
+            </ion-col>
+          </ion-row>
+          <!-- --------- List of items ----------- -->
+          <ion-row>
+            <ion-col size-md="6" offset-md="3">
+              <ion-list id="expenses-list"></ion-list>
+            </ion-col>
+          </ion-row>
+
+          <!-- ------------ Total Expenses -------------- -->
+          <ion-row>
+            <ion-col size-md="6" offset-md="3">
+              <ion-button expand="block" fill="solid"
+                >Total Expenses: $ <span id="total-expenses"></span
+              ></ion-button>
             </ion-col>
           </ion-row>
         </ion-grid>
       </ion-content>
     </ion-app>
+    <script src="app.js"></script>
   </body>
 </html>
